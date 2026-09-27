@@ -13,7 +13,8 @@
     "start": "node --env-file-if-exists=.env --disable-warning=ExperimentalWarning src/server.ts",
     "test": "node --test --disable-warning=ExperimentalWarning test/*.test.ts",
     "typecheck": "tsc",
-    "demo:gif": "node --disable-warning=ExperimentalWarning scripts/record-demo.ts"
+    "demo:gif": "node --disable-warning=ExperimentalWarning scripts/record-demo.ts",
+    "demo:preview": "node --disable-warning=ExperimentalWarning scripts/social-preview.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
