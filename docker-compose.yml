@@ -1,0 +1,20 @@
+services:
+  lapse:
+    build: .
+    container_name: lapse
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - lapse-data:/data
+    environment:
+      LAPSE_BASE_URL: http://localhost:3000
+      # LAPSE_USER: admin
+      # LAPSE_PASSWORD: change-me
+      # SMTP_URL: smtp://user:pass@smtp.example.com:587
+      # SMTP_FROM: Lapse <lapse@example.com>
+      # ANTHROPIC_API_KEY: sk-ant-...        # contract extraction with Claude
+      # OLLAMA_URL: http://ollama:11434      # or a local LLM
+
+volumes:
+  lapse-data:
